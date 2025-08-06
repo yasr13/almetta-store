@@ -1,6 +1,7 @@
+# src/gql/operations/ProductListByCategory.graphql
 query ProductListByCategory($slug: String!, $channel: String!) {
-  category(slug: $slug, channel: $channel) {
-    products(first: 10) {
+  category(slug: $slug) {
+    products(first: 10, channel: $channel) {   # ✅ channel di sini
       edges {
         node {
           id
