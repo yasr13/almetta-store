@@ -1,0 +1,27 @@
+# src/gql/operations/SearchProducts.graphql
+query SearchProducts($search: String!) {
+  products(
+    filter: { search: $search }
+    first: 10
+  ) {
+    edges {
+      node {
+        name
+        slug
+        thumbnail {
+          url
+        }
+        pricing {
+          priceRange {
+            start {
+              gross {
+                amount
+                currency
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

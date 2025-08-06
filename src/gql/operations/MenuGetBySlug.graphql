@@ -1,0 +1,15 @@
+query MenuGetBySlug($slug: String!) {
+  menu(slug: $slug) {
+    name
+    items {
+      name
+      url
+      category {
+        slug
+      }
+      collection {
+        slug
+      }
+    }
+  }
+}

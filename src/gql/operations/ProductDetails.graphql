@@ -1,0 +1,22 @@
+query ProductDetails($slug: String!, $channel: String!) {
+  product(slug: $slug, channel: $channel) {
+    ...ProductFragment
+    description
+    category {
+      products(first: 4) {
+        edges {
+          node {
+            ...ProductFragment
+          }
+        }
+      }
+    }
+    variants {
+      ...VariantFragment
+    }
+    images {
+      url
+      alt
+    }
+  }
+}

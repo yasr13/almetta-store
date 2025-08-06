@@ -1,0 +1,15 @@
+schema:
+  - https://store-dglxxmc9.saleor.cloud/graphql/:
+      headers:
+        X-Saleor-Domain: "https://store-dglxxmc9.saleor.cloud"
+        Authorization: AUTHORIZATION_TOKEN
+documents: "src/gql/**/*.graphql"
+
+generates:
+  src/gql/graphql.ts:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-react-apollo"
+    config:
+      withHooks: true

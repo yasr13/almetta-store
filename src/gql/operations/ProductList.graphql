@@ -1,0 +1,14 @@
+query ProductList($first: Int!, $after: String) {
+  products(first: $first, after: $after) {
+    edges {
+      node {
+        ...ProductFragment
+      }
+      cursor
+    }
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+  }
+}

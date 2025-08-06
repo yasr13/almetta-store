@@ -1,0 +1,9 @@
+query ChannelsList {
+  shop {
+    channels {
+      id
+      slug
+      name
+    }
+  }
+}

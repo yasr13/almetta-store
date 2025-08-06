@@ -1,0 +1,21 @@
+fragment VariantFragment on ProductVariant {
+  id
+  name
+  sku
+  pricing {
+    price {
+      gross {
+        amount
+        currency
+      }
+    }
+  }
+  attributes {
+    attribute {
+      name
+    }
+    values {
+      name
+    }
+  }
+}

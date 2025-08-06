@@ -1,0 +1,12 @@
+# src/gql/fragments/PricingFragment.graphql
+fragment PricingFragment on ProductPricingInfo {
+  onSale
+  priceRange {
+    start {
+      gross {
+        amount
+        currency
+      }
+    }
+  }
+}
