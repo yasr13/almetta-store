@@ -1,6 +1,6 @@
 import { cookies } from "next/headers";
 import { CheckoutCreateDocument, CheckoutFindDocument } from "@/gql/graphql";
-import { executeGraphQL } from "@/gql/graphql";
+import { executeGraphQL } from "@/lib/graphql/fetch";
 
 export async function getIdFromCookies(channel: string) {
 	const cookieName = `checkoutId-${channel}`;

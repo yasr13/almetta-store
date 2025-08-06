@@ -3,7 +3,7 @@ import { type Metadata } from "next";
 import edjsHTML from "editorjs-html";
 import xss from "xss";
 import { PageGetBySlugDocument } from "@/gql/graphql";
-import { executeGraphQL } from "@/gql/graphql";
+import { executeGraphQL } from "@/lib/graphql/fetch";
 
 const parser = edjsHTML();
 

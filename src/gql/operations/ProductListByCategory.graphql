@@ -1,0 +1,26 @@
+query ProductListByCategory($slug: String!, $channel: String!) {
+  category(slug: $slug, channel: $channel) {
+    products(first: 10) {
+      edges {
+        node {
+          id
+          name
+          slug
+          thumbnail {
+            url
+          }
+          pricing {
+            priceRange {
+              start {
+                gross {
+                  amount
+                  currency
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

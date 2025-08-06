@@ -1,5 +1,5 @@
 import { CurrentUserOrderListDocument } from "@/gql/graphql";
-import { executeGraphQL } from "@/gql/graphql";
+import { executeGraphQL } from "@/lib/graphql/fetch";
 import { LoginForm } from "@/ui/components/LoginForm";
 import { OrderListItem } from "@/ui/components/OrderListItem";
 
